@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} ABOUT {% endblock %}
+
+{% block content %}
+ <!-- about section start -->
+ <section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About me</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src='{% static 'main/images/me.jpg' %}' alt="">
+            </div>
+            <div class="column right">
+                <div class="text">I'm Palak and I'm a <span class="typing"></span></div>
+                <p>Currently pursuing B.Tech in third year at Chitkara University and having my studies in Computer Science Engineering, I have deep interest in coding. I have the knowledge of programming in C, C++, Core Java and python. My Other Interests includes Dancing and Travelling.</p>
+                <a href="{% url 'resume' %}">View My Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
