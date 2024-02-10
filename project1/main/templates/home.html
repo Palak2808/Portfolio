@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} HOME {% endblock %}
 
 {% block content %}
  <!-- home section start -->
- <section class="home" id="home">
+ <section class="about" id="about">
     <div class="max-width">
-        <div class="home-content">
-            <div class="text-1">Hello, my name is</div>
-            <div class="text-2">Palak</div>
-            <div class="text-3">And I'm a <span class="typing"></span></div>
-            <a href="#">Hire me</a>
+        <h2 class="title">About me</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src='{% static 'main/images/formalMe.jpeg' %}' style="height:430px;" alt="">
+            </div>
+            <div class="column right">
+                <div class="text">I'm Palak and I'm a <span class="typing"></span></div>
+                <p>I Am a Pre-Final Year Computer Science Student. I consider my self a responsible and orderly
+                    person.I have deep interest in coding and have participated in some hackathons/Codathons in our
+                    University. I am looking forward for my first work experience. My other interests include Dancing,
+                    i have been part of Dancing Community of my University and has participated in many Events.</p>
+                <br>  <a href="{% url 'resume' %}">View My Resume</a>
+            </div>
         </div>
     </div>
 </section>
+           
+
 {% endblock content %}
